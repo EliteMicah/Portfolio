@@ -1,17 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import logo from "../../svg/logo.svg";
 import github from "../../svg/github.svg";
 import linkedin from "../../svg/linkedin.svg";
-//import portrait from "../../images/portrait.JPG";
+import portrait from "../../images/portrait.png";
+import sunwater from "../../images/sunwater.png";
+import surfboard from "../../images/surfboard.png";
 
 export default function HomePage() {
-  const router = useRouter();
-
   return (
     <div className="bg-white">
       <header className="h-18">
@@ -32,24 +30,28 @@ export default function HomePage() {
               <ul className="flex items-center justify-evenly h-full flex-wrap">
                 <li>
                   <Link href={"/home"}>
-                    <h1 className="text-gray-500 hover:text-gray-700">Home</h1>
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
+                      Home
+                    </h1>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/about"}>
-                    <h1 className="text-gray-500 hover:text-gray-700">About</h1>
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
+                      About
+                    </h1>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/projects"}>
-                    <h1 className="text-gray-500 hover:text-gray-700">
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
                       Projects
                     </h1>
                   </Link>
                 </li>
                 <li className="h-full flex items-center border-0 border-b-black border-black ">
                   <Link href={"/connect"}>
-                    <h1 className="text-gray-500 hover:text-gray-700">
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
                       Connect
                     </h1>
                   </Link>
@@ -61,10 +63,7 @@ export default function HomePage() {
             <div></div>
             <div></div>
             <div className="w-[20%] h-1/2 bg-gray-700 rounded-4xl flex flex-row items-center justify-evenly">
-              <Link
-                href="https://github.com/EliteMicah/SWE-Over-Under"
-                target="_blank"
-              >
+              <Link href="https://github.com/EliteMicah" target="_blank">
                 <Image
                   src={github}
                   alt="github"
@@ -93,7 +92,47 @@ export default function HomePage() {
       </header>
       <section className="flex justify-center">
         <div className="w-[90%] border-2 border-gray-300 items-center h-screen rounded-2xl">
-          <div></div>
+          <div className="h-180 w-full flex items-center justify-evenly">
+            <div className="flex flex-col">
+              <Image
+                src={sunwater}
+                alt="Sun behind the ocean"
+                width={500}
+                height={300}
+                className="absolute z-0 top-35 left-55"
+                loading="lazy"
+              ></Image>
+              <h1 className="text-4xl font-bold">Hey, I'm Micah Woodring!</h1>
+              <h2 className="text-2xl text-gray-600 font-bold">
+                Front-End Developer
+              </h2>
+              <h3 className="pt-4 text-xl flex flex-row flex-wrap w-110 text-gray-700">
+                Good to have you here. Explore my projects and let's connect!
+                Hope you find something you like. If not, at least the scroll
+                was smooth.
+              </h3>
+              <Image
+                src={surfboard}
+                alt="Surfboard"
+                width={130}
+                height={90}
+                className="absolute z-0 bottom-10 left-19 -rotate-12 hover:scale-103 hover:-rotate-9 duration-200 ease-in-out"
+                loading="lazy"
+              ></Image>
+            </div>
+            <div className="w-[375] h-[450] border-2 border-gray-100 rounded-3xl flex items-center justify-center">
+              <div className="items-center">
+                <Image
+                  src={portrait}
+                  alt="Portrait"
+                  width={300}
+                  height={400}
+                  className="rounded-3xl hover:scale-103 hover:rotate-1 duration-200 ease-in-out"
+                  loading="lazy"
+                ></Image>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
