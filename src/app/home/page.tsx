@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../svg/logo.svg";
-import github from "../../svg/github.svg";
-import linkedin from "../../svg/linkedin.svg";
+import logo from "../../images/Logo.png";
+import github from "../../images/github.png";
+import linkedin from "../../images/linkedin.png";
 import portrait from "../../images/portrait.png";
 import sunwater from "../../images/sunwater.png";
 import surfboard from "../../images/surfboard.png";
@@ -21,37 +21,37 @@ export default function HomePage() {
               width={40}
               height={40}
               style={{ filter: "invert(0.2)" }}
-            />
+            ></Image>
             <div></div>
             <div></div>
           </section>
           <nav className="flex items-center justify-evenly">
             <div className="w-[70%] h-4/6 border-1 rounded-4xl border-gray-400">
-              <ul className="flex items-center justify-evenly h-full flex-wrap">
+              <ul className="flex items-center justify-evenly h-full w-full">
                 <li>
                   <Link href={"/home"}>
-                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700 border-2 w-max ">
                       Home
                     </h1>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/about"}>
-                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700 border-2">
                       About
                     </h1>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/projects"}>
-                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700 border-2">
                       Projects
                     </h1>
                   </Link>
                 </li>
                 <li className="h-full flex items-center border-0 border-b-black border-black ">
                   <Link href={"/connect"}>
-                    <h1 className="text-gray-500 font-semibold hover:text-gray-700">
+                    <h1 className="text-gray-500 font-semibold hover:text-gray-700 border-2">
                       Connect
                     </h1>
                   </Link>
@@ -69,9 +69,9 @@ export default function HomePage() {
                   alt="github"
                   width={23}
                   height={23}
-                  style={{ filter: "invert(0.2)" }}
-                  className="hover:!filter-[invert(0.1)]"
-                />
+                  style={{ filter: "invert(0.7)" }}
+                  className="hover:!filter-[invert(0.8)]"
+                ></Image>
               </Link>
               <Link
                 href="https://www.linkedin.com/in/software-engineer-micahwoodring/"
@@ -82,9 +82,9 @@ export default function HomePage() {
                   alt="linkedin"
                   width={23}
                   height={23}
-                  style={{ filter: "invert(0.2)" }}
-                  className="hover:!filter-[invert(0.1)]"
-                />
+                  style={{ filter: "invert(0.7)" }}
+                  className="hover:!filter-[invert(0.8)]"
+                ></Image>
               </Link>
             </div>
           </section>
@@ -104,7 +104,7 @@ export default function HomePage() {
               ></Image>
               <h1 className="text-4xl font-bold">Hey, I'm Micah Woodring!</h1>
               <h2 className="text-2xl text-gray-600 font-bold">
-                Front-End Developer
+                Software Developer
               </h2>
               <h3 className="pt-4 text-xl flex flex-row flex-wrap w-110 text-gray-700">
                 Good to have you here. Explore my projects and let's connect!
@@ -114,23 +114,20 @@ export default function HomePage() {
               <Image
                 src={surfboard}
                 alt="Surfboard"
-                width={130}
-                height={90}
-                className="absolute z-0 bottom-10 left-19 -rotate-12 hover:scale-103 hover:-rotate-9 duration-200 ease-in-out"
+                width={100}
+                className="-rotate-12 hover:scale-103 hover:-rotate-9 duration-200 ease-in-out object-contain"
                 loading="lazy"
               ></Image>
             </div>
             <div className="w-[375] h-[450] border-2 border-gray-100 rounded-3xl flex items-center justify-center">
-              <div className="items-center">
-                <Image
-                  src={portrait}
-                  alt="Portrait"
-                  width={300}
-                  height={400}
-                  className="rounded-3xl hover:scale-103 hover:rotate-1 duration-200 ease-in-out"
-                  loading="lazy"
-                ></Image>
-              </div>
+              <Image
+                src={portrait}
+                alt="Portrait"
+                width={300}
+                height={400}
+                className="rounded-3xl hover:scale-103 hover:rotate-1 duration-200 ease-in-out min-w-20"
+                loading="lazy"
+              ></Image>
             </div>
           </div>
         </div>

@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  experimental: {
+    turbo: {
+      rules: {
+        "*.svg": {
+          loaders: ["@svgr/webpack"],
+          as: "*.js",
+        },
+      },
+    },
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -9,6 +21,7 @@ const nextConfig: NextConfig = {
     return config;
   },
   images: {
+    unoptimized: true,
     remotePatterns: [],
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

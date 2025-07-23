@@ -12,7 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily: {},
+      fontFamily: {
+        title: ["Oswald, sans-serif"],
+      },
     },
   },
   plugins: [],
